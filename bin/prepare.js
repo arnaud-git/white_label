@@ -2,6 +2,7 @@
 
 const program = require('commander');
 const Promise = require('bluebird');
+const images = require('./lib/images');
 require('colors');
 
 let config;
@@ -31,4 +32,4 @@ program
   })
   .parse(process.argv);
 
-selectShippingConfig();
+selectShippingConfig().then(() => images.restoreSplashscreens(config, program));

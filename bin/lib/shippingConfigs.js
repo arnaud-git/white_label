@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const configDir = path.join(__dirname, '../../config/shippingConfig');
 
 function updateShippingFile(config, callback) {
   const inputFile = path.join(__dirname, '../../config/selectedConfig.js.tml');
